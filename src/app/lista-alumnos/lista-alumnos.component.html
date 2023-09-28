@@ -1,0 +1,10 @@
+<p class="container" [ngStyle]="getTamanoLetra()">Cantidad total de alumnos inscritos: {{cantidadAlumnos}}</p>
+
+<div class ="container" [ngClass]="colorLista === 'blue' ? 'container-blue' : 'container-black'">
+    <p [ngStyle]="getTamanoLetra()">Lista de Alumnos del curso Angular</p>
+    <ul>
+        <li *ngFor="let alumno of alumnos">
+            {{alumno | titlecase}}
+        </li>
+    </ul>
+</div>
